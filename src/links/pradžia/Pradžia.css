@@ -16,24 +16,12 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(18.5px);
 -webkit-backdrop-filter: blur(18.5px);
+padding-top: 80px;
 }
-.logo-text{
-    width: max-content;
-    height: max-content;
-    color: #D4AF37;
-  background-image: linear-gradient(180deg, #b8ad95, #a89f8a 25%, #D4AF37 50%, #a89f8a 75%, #b8ad95 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-#logo-1{
-    font-family: 'GFS Didot', serif;
-    font-weight: 400;
-  font-style: normal;
-}
-#logo-2{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-  font-style: normal;
+.ola-logo-name{
+    width: auto;
+    max-height: 500px;
+    height: 40vw;
+    background: rgba(15, 8, 8, 0);
+    margin-top: 20vh;
 }

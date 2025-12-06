@@ -9,5 +9,18 @@
   height: 100vh;
 
 }
+#text{
+  color: #D4AF37;
+  background-image: linear-gradient(180deg, #b8ad95, #a89f8a 25%, #D4AF37 50%, #a89f8a 75%, #b8ad95 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+a{
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0);
+  width: max-content;
+  height: max-content;
+}
 
 

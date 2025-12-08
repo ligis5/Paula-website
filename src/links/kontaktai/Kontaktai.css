@@ -1,0 +1,27 @@
+.kontaktai-background-effects{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.856);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(18.5px);
+-webkit-backdrop-filter: blur(18.5px);
+}
+.kontaktai-name{
+    font-size: 3rem;
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+}
+.kontaktai-about{
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+}

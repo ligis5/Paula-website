@@ -1,6 +1,6 @@
 import "./Pradžia.css";
-import BG1 from "../../content/3.jpeg";
-import olaLogoName from "../../content/ola_logo_name.png";
+import BG1 from "../../content/images/sweet-cherry.jpeg";
+import olaLogoName from "../../content/images/ola_logo_name.png";
 
 const Pradžia = () => {
   return (

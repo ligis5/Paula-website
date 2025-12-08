@@ -1,23 +1,22 @@
 import "./Header.css";
-import paulaLogo from "../../content/ola_logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="header">
-      <img src={paulaLogo} alt="O'LÀ Fragrances Logo" className="logo-image" />
+    <div className="header">
       <div className="header-categories">
-        <a href="#produktai">
+        <Link to="/produktai">
           <h3 id="text" className="category-item">
             PRODUKTAI
           </h3>
-        </a>
-        <a href="#kontaktai">
+        </Link>
+        <Link to="/kontaktai">
           <h3 id="text" className="category-item">
             KONTAKTAI
           </h3>
-        </a>
+        </Link>
       </div>
-    </header>
+    </div>
   );
 };
 

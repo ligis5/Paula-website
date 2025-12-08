@@ -1,26 +1,21 @@
 .header{
     width: 100%;
     height: 80px;
-    padding: 1rem;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     background: rgba(15, 8, 8, 0);
 }
-.logo-image{
-    width: 50px;
-    height: 50px;
-    margin-right: 1rem;
-    background: rgba(15, 8, 8, 0);
-}
+
 .header-categories{
+    height: min-content;
+    margin-right: 2rem;
     display: flex;
     background: rgba(15, 8, 8, 0);
-    height: 100%;
     justify-content: flex-end;
     gap: 3rem;
     align-items: center;
@@ -31,4 +26,5 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
   font-style: normal;
+  text-shadow: 1px 1px #cf9f0086;
 }

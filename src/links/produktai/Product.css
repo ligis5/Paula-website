@@ -1,55 +1,71 @@
-.product-card {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #ffd700;
+.product-card{
+  width: 500px;
+  height: auto;
+  border: 2px solid #D4AF37;
+}
+.image-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.product-image{
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+.product-info{
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  width: 100%;
+  min-height: 15vh;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
+}
+.product-name{
+  font-family: "GFS Didot", serif;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: white;
+  margin: 0;
+  width: 100%;
   height: fit-content;
-  width: 700px;
-  height: 500px;
+  text-align: center;
 }
-
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.product-card:hover {
-  transform: scale(1.1);
-}
-
-.product-info {
-  padding: 1.5rem;
-  width: 100%;
-    height: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  flex: 1;
-}
-
-.product-name {
-  font-size: 1.5rem;
-  width: 100%;
-    height: fit-content;
-    text-align: center;
-  font-weight: bold;
-  margin: 0;
-}
-
-.product-description {
-    width: fit-content;
-    height: fit-content;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-  flex: 1;
-}
-
-.product-price {
-    width: fit-content;
-    height: fit-content;
+.product-description{
+  font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  color: #D4AF37;
+  background-image: linear-gradient(180deg, #c2b68e, #d1b558 25%, #D4AF37 50%, #d1b558 75%, #c2b68e 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.product-price{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin: 0;
+  color: white;
+  margin-top: 0.5rem;
+  width: 100%;
+  height: fit-content;
+  margin-top: auto;
+}
+@media (max-width: 700px) {
+  .product-card{
+    width: 90%;
+  }
+  .product-name{
+    font-size: 1.5rem;
+  }
+  .product-description{
+    font-size: 1rem;
+  }
+  .product-price{
+    font-size: 1.2rem;
+  }
 }

@@ -9,22 +9,15 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div
-      className="product-card"
-      onClick={handleClick}
-      style={{
-        backgroundImage: `url(${product.image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <div className="product-card" onClick={handleClick}>
+      <div className="image-container">
+        <img src={product.image} alt={product.name} className="product-image" />
+      </div>
       <div className="product-info">
         <h3 id="text" className="product-name">
           {product.name}
         </h3>
-        <p id="text" className="product-description">
-          {product.description}
-        </p>
+        <p className="product-description">{product.description}</p>
         <p id="text" className="product-price">
           {product.price}€
         </p>

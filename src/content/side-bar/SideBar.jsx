@@ -1,12 +1,10 @@
 import "./SideBar.css";
 import facebookIcon from "../../content/images/f.svg";
 import instagramIcon from "../../content/images/insta.svg";
-import paulaLogo from "../../content/images/ola_logo.png";
 
 const SideBar = () => {
   return (
     <div className="sidebar-container">
-      <img src={paulaLogo} alt="O'LÀ Fragrances Logo" className="logo-image" />
       <div className="sidebar-items">
         <a
           href="https://www.facebook.com/profile.php?id=61578634782979"

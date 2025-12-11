@@ -1,25 +1,85 @@
 .pradžia-container{
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 .pradžia-background-effects{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
     height: 100%;
     width: 100%;
-    background: rgba(15, 8, 8, 0.664);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(18.5px);
--webkit-backdrop-filter: blur(18.5px);
-padding-top: 80px;
+    background: #231f1eb4;
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: fit-content;
+    padding-top: 80px;
 }
 .ola-logo-name{
     width: auto;
-    max-height: 500px;
+    max-height: 300px;
     height: 40vw;
-    background: rgba(15, 8, 8, 0);
-    margin-top: 20vh;
+    /* background: rgba(15, 8, 8, 0); */
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    padding-bottom: 80px;
+    padding-right: 10vw;
+}
+.about-ola-description, .about-ola-description-2{
+    padding: 1rem;
+    text-align: end;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 2px solid #D4AF37;
+}
+
+@media (max-width: 1000px) {
+    .pradžia-background-effects{
+    display: flex;
+    flex-direction: column;
+}
+    .logo-container{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        /* padding-top: 40px; */
+    }
+    .ola-logo-name{
+        margin-left: 0;
+    }
+.about-container{
+    align-items: center;
+    padding-right: 0;
+    padding-bottom: 40px;
+    padding-left: 80px;
+}
+.about-ola-description, .about-ola-description-2{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 90%;
+}
+}
+@media (max-width: 750px) {
+    .pradžia-container{
+    height: calc(100% - 80px);
+    width: 100%;
+}
+.about-container{
+    padding-left: 0;
+}
 }

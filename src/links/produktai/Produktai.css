@@ -1,5 +1,7 @@
-.produktai-background-effects{
-    height: 100%;
+.produktai-container{
+    padding-top: 80px;
+    min-height: 100vh;
+    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,35 +26,21 @@ backdrop-filter: blur(18.5px);
     width: fit-content;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0);
+    margin-top: 2rem;
 }
 .products-cards-container{
     display: flex;
-    gap: 2rem;
-    width: 100%;
-    height: fit-content;
-    padding: 2rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    width: fit-content;
+    height: auto;
+    padding: 5rem;
 }
-
-.products-cards-container > * {
-    flex-shrink: 0;
-}
-
-.products-cards-container::-webkit-scrollbar {
-    height: 12px;
-}
-
-.products-cards-container::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-.products-cards-container::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-}
-
-.products-cards-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
+@media (max-width: 700px){
+    .products-cards-container{
+        padding-left: 40px;
+        padding-right: 0.5rem;
+        padding-top: 5rem;
+    }
 }

@@ -1,9 +1,11 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import paulaLogo from "../../content/images/ola_logo.png";
 
 const Header = () => {
   return (
     <div className="header">
+      <img src={paulaLogo} alt="O'LÀ Fragrances Logo" className="logo-image" />
       <div className="header-categories">
         <Link to="/produktai">
           <h3 id="text" className="category-item">

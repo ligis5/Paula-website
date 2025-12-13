@@ -13,7 +13,7 @@ const Product = ({ product }) => {
       <div className="image-container">
         <img src={product.image} alt={product.name} className="product-image" />
       </div>
-      <div className="product-info">
+      <div className="product-info" style={{ backgroundColor: product.color }}>
         <h3 id="text" className="product-name">
           {product.name}
         </h3>

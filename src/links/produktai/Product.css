@@ -2,43 +2,49 @@
   width: 500px;
   height: auto;
   border: 2px solid #D4AF37;
+  cursor: pointer;
+  border-radius: 50px;
 }
 .image-container{
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
+  border-bottom: 2px solid #D4AF37;
 }
 .product-image{
   width: 100%;
   height: 30vh;
   object-fit: cover;
+  border-radius: 50px 50px 0 0;
 }
 .product-info{
-  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: rgba(0, 0, 0, 0.6); */
   padding: 1rem;
-  width: 100%;
-  min-height: 15vh;
-  max-height: fit-content;
+  min-width: calc(100% - 2rem);
+  width: fit-content;
+  height: 15vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0 0 50px 50px;
 }
 .product-name{
   font-family: "GFS Didot", serif;
   font-size: 2rem;
   font-weight: lighter;
-  color: white;
+  text-shadow: 1px 1px rgba(245, 245, 245, 0.342);
   margin: 0;
-  width: 100%;
+  width: fit-content;
   height: fit-content;
   text-align: center;
 }
 .product-description{
   font-family: "Montserrat", sans-serif;
+  text-shadow: 1px 1px rgba(245, 245, 245, 0.342);
   font-size: 1.25rem;
-  width: 100%;
+  width: auto;
   height: fit-content;
-  margin: auto;
   color: #D4AF37;
   background-image: linear-gradient(180deg, #c2b68e, #d1b558 25%, #D4AF37 50%, #d1b558 75%, #c2b68e 100%);
   background-clip: text;
@@ -46,14 +52,13 @@
   -webkit-text-fill-color: transparent;
 }
 .product-price{
+  margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  margin-top: 0.5rem;
   width: 100%;
   height: fit-content;
-  margin-top: auto;
 }
 @media (max-width: 700px) {
   .product-card{

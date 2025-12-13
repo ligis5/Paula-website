@@ -8,6 +8,7 @@ const produktaiData = [
     image: require("../../content/images/black-amber.jpeg"),
     about:
       "„Black Amber“ - gilus ir šiltas kvapas, kurio širdis yra gintaras. Jį apgaubia eukaliptas, cinamonas, rožės, pušis, jazminas, muskusas, vanilė ir pačiuliai.",
+    color: "#171614",
   },
   {
     id: "rosewood-glow",
@@ -19,6 +20,7 @@ const produktaiData = [
     image: require("../../content/images/rosewood-glow.jpeg"),
     about:
       "čiobreliai, levanda, rožės apelsinas, orris, kedro mediena smilkalai, gintaras, vanilė, pačiulis",
+    color: "#3A4D50",
   },
   {
     id: "sacred-wood",
@@ -30,6 +32,7 @@ const produktaiData = [
     image: require("../../content/images/sacred-wood.jpg"),
     about:
       "Viršutinės natos kakava, aldehidas, bergamotė, apelsinas. Vidurinės natos jazminas, gintaras, ciklamenas. Pagrindinės natos pačiulis, vanilė, kedras, muskusas",
+    color: "#3A4D50",
   },
   {
     id: "sweet-cherry",
@@ -42,6 +45,18 @@ const produktaiData = [
     image: require("../../content/images/sweet-cherry.jpeg"),
     about:
       "Kvapas apgaubia visa patalpa yra labai šiltas, jaukus ir saldus, todel ideliai tiks rudens ir žiemos vakarams. Viršutinės natos valencijos apelsinai, vyšnia, aviečių lapai. Vidurinės natos laukinė braškė, žaluma, cukrus. Pagrindinės natos žaliūjų obuolių žievelė, vanilė",
+    color: "#4F262E",
+  },
+  {
+    id: "cashmere-wood",
+    name: "Cashmere Wood",
+    description:
+      "Gaivūs citrusai ir obuoliai susilieja su levandos ramybe, o pagrindas iš pačiulio, muskuso ir kašmyro medienos palieka šiltą, švelnų pėdsaką – tarsi minkštas, jaukus apsikabinimas.",
+    price: 20,
+    image: require("../../content/images/cashmere-wood.png"),
+    about:
+      "Viršutinės natos:  citrusai, obuoliai, levanda Širdies natos: vieletiniai lapeliai, magnolija Pagrindinės natos: pačiulis, muskusas, kašmyro mediena",
+    color: "#3A4D50",
   },
 ];
 

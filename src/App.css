@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+.App{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100vw;
+  min-width: fit-content;
+  max-width: 100vw;
   height: 100vh;
 
 }
+
 #text{
   color: #D4AF37;
   background-image: linear-gradient(180deg, #e7e7e7, #a7a39b 25%, #D4AF37 50%, #a19e96 75%, #d8d8d8 100%);

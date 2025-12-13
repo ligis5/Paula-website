@@ -14,28 +14,25 @@ backdrop-filter: blur(8px);
 .logo-container{
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: fit-content;
     width: fit-content;
-    padding-top: 80px;
 }
 .ola-logo-name{
     width: auto;
     max-height: 300px;
     height: 40vw;
-    /* background: rgba(15, 8, 8, 0); */
     margin-top: 10vh;
     margin-left: 10vw;
 }
 .about-container{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 100%;
-    width: 100%;
+    height: fit-content;
+    width: fit-content;
     max-width: 900px;
-    padding-bottom: 80px;
-    padding-right: 10vw;
+    margin-right: 10vw;
+    margin-top: auto;
+    margin-bottom: 80px;
 }
 .about-ola-description, .about-ola-description-2{
     padding: 1rem;
@@ -48,16 +45,17 @@ backdrop-filter: blur(8px);
     border-bottom: 2px solid #D4AF37;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
     .pradžia-background-effects{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
     .logo-container{
         width: 100%;
         justify-content: center;
         align-items: center;
-        /* padding-top: 40px; */
     }
     .ola-logo-name{
         margin-left: 0;
@@ -66,12 +64,14 @@ backdrop-filter: blur(8px);
     align-items: center;
     padding-right: 0;
     padding-bottom: 40px;
-    padding-left: 80px;
+    padding-left: 0;
+    margin-right: 0;
 }
 .about-ola-description, .about-ola-description-2{
     font-size: 1.2rem;
     text-align: center;
     width: 90%;
+    margin: 1rem;
 }
 }
 @media (max-width: 750px) {
@@ -79,7 +79,5 @@ backdrop-filter: blur(8px);
     height: calc(100% - 80px);
     width: 100%;
 }
-.about-container{
-    padding-left: 0;
-}
+
 }

@@ -10,6 +10,7 @@
 }
 
 .footer-items {
+    width: 100%;
     display: flex;
     height: fit-content;
     gap: 2rem;

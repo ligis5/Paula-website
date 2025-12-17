@@ -1,13 +1,13 @@
 .produktai-container{
-    height: fit-content;
+    min-height: 100vh;
+    max-height: fit-content;
     width: 100%;
 }
 .produktai-background-effects{
-padding-top: 80px;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
     display: flex;
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,7 @@ backdrop-filter: blur(8px);
     width: fit-content;
     height: fit-content;
     background-color: rgba(0, 0, 0, 0);
+    margin-top: 5rem;
 }
 .produktai-about{
     font-family: "Montserrat", sans-serif;
@@ -37,14 +38,30 @@ backdrop-filter: blur(8px);
     justify-content: center;
     gap: 2vw;
     width: 100%;
-    height: auto;
-    padding-bottom: 5rem;
+    height: 100%;
     padding-top: 5rem;
+    padding-bottom: 5rem;
 }
-@media (max-width: 700px){
+@media (max-width: 750px){
+    .produktai-name{
+        margin-top: 60px;
+        margin-bottom: 0;
+    }
+    .produktai-about{
+        margin-top: 1rem;
+        text-align: center;
+    }
     .products-cards-container{
-        padding-left: 40px;
-        padding-right: 0.5rem;
-        padding-top: 5rem;
+        padding-top: 0;
+        padding-bottom: 6vh;
+    }
+}
+@media (max-width: 1100px){
+    .products-cards-container{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    overflow-y: hidden;
     }
 }

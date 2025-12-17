@@ -3,59 +3,67 @@ const produktaiData = [
     id: "black-amber",
     name: "Black Amber",
     description: "Tamsa, kuri kvepia gintaru.",
-    description2: "Uždegusi - pasineri į švelnų dūmų ir gintaro glėbį.",
+    description2:
+      "Uždegus žvakę pasineri į šiltą, šiek tiek dūminį gintaro glėbį, kuris kuria jaukią ir paslaptingą atmosferą.",
     price: 20,
     image: require("../../content/images/black-amber.jpeg"),
     about:
-      "„Black Amber“ - gilus ir šiltas kvapas, kurio širdis yra gintaras. Jį apgaubia eukaliptas, cinamonas, rožės, pušis, jazminas, muskusas, vanilė ir pačiuliai.",
+      "Viršutinės natos: eukaliptas, cinamonas. Vidurinės natos: rožės, pušis, jazminas. Pagrindinės natos: gintaras, muskusas, vanilė, pačiuliai.",
     color: "#171614",
   },
+
   {
     id: "rosewood-glow",
-    name: "Rosewood glow",
+    name: "Rosewood Glow",
     description:
-      "Mano kūrinys kuris mane veda iš proto, kvapas kuriam sunku atsispirti, o jaučiamas jis iš toli.",
-    description2: "Uždegusi - pasineri į švelnų dūmų ir gintaro glėbį.",
+      "Mano kūrinys, kuris mane veda iš proto – kvapas, kuriam sunku atsispirti ir kuris jaučiamas iš toli.",
+    description2:
+      "Rožių absoliuto inspiracija susipina su šilta kedro mediena – ryškus, bet ne saldus aromatas, turintis prabangių kvepalų pojūtį.",
     price: 20,
     image: require("../../content/images/rosewood-glow.jpeg"),
     about:
-      "čiobreliai, levanda, rožės apelsinas, orris, kedro mediena smilkalai, gintaras, vanilė, pačiulis",
+      "Viršutinės natos: čiobreliai, levanda, apelsinas. Vidurinės natos: rožės, orris. Pagrindinės natos: kedro mediena, smilkalai, gintaras, vanilė, pačiulis.",
     color: "#3A4D50",
   },
+
   {
     id: "sacred-wood",
     name: "Sacred Wood",
     description:
-      "Sukurta ramybei, susikaupimui, meditacijoms ar masažams. Kai norisi išjungti pasaulį ir įsijungti vidų.",
-    description2: "Uždegusi - pasineri į švelnų dūmų ir gintaro glėbį.",
+      "Sukurta ramybei, susikaupimui ir tylai – kai norisi atsitraukti nuo išorinio pasaulio.",
+    description2:
+      "Idealiai tinka meditacijoms, masažams ar ramiems vakarams, kai norisi įsijungti vidinį balansą.",
     price: 20,
     image: require("../../content/images/sacred-wood.jpg"),
     about:
-      "Viršutinės natos kakava, aldehidas, bergamotė, apelsinas. Vidurinės natos jazminas, gintaras, ciklamenas. Pagrindinės natos pačiulis, vanilė, kedras, muskusas",
+      "Viršutinės natos: kakava, aldehidai, bergamotė, apelsinas. Vidurinės natos: jazminas, gintaras, ciklamenas. Pagrindinės natos: pačiulis, vanilė, kedras, muskusas.",
     color: "#3A4D50",
   },
+
   {
     id: "sweet-cherry",
-    name: "Sweet cherry",
-    description:
-      "Sweet cherry - Soju vaško žvakė kvepianti saldžiomis vyšniomis.",
+    name: "Sweet Cherry",
+    description: "Sojų vaško žvakė, kvepianti saldžiomis vyšniomis.",
     description2:
-      "Gerai įsidegusi ji mane nukelia į vaikystė ir primena dienas kai močiutė virdavo vyšnių uogiene.",
+      "Gerai įsidegusi nukelia į vaikystę ir primena dienas, kai močiutė virdavo naminę vyšnių uogienę.",
     price: 20,
     image: require("../../content/images/sweet-cherry.jpeg"),
     about:
-      "Kvapas apgaubia visa patalpa yra labai šiltas, jaukus ir saldus, todel ideliai tiks rudens ir žiemos vakarams. Viršutinės natos valencijos apelsinai, vyšnia, aviečių lapai. Vidurinės natos laukinė braškė, žaluma, cukrus. Pagrindinės natos žaliūjų obuolių žievelė, vanilė",
+      "Viršutinės natos: Valensijos apelsinai, vyšnia, aviečių lapai. Vidurinės natos: laukinė braškė, žaluma, cukrus. Pagrindinės natos: žaliųjų obuolių žievelė, vanilė.",
     color: "#4F262E",
   },
+
   {
     id: "cashmere-wood",
     name: "Cashmere Wood",
     description:
-      "Gaivūs citrusai ir obuoliai susilieja su levandos ramybe, o pagrindas iš pačiulio, muskuso ir kašmyro medienos palieka šiltą, švelnų pėdsaką – tarsi minkštas, jaukus apsikabinimas.",
+      "Švarus, švelnus ir šiltas aromatas, kuris ramina ir apgaubia jaukumu.",
+    description2:
+      "Gaivūs citrusai ir obuoliai susilieja su levandos ramybe, o kašmyro medienos pagrindas palieka švelnų, jaukų pėdsaką – tarsi minkštas apsikabinimas.",
     price: 20,
     image: require("../../content/images/cashmere-wood.png"),
     about:
-      "Viršutinės natos:  citrusai, obuoliai, levanda Širdies natos: vieletiniai lapeliai, magnolija Pagrindinės natos: pačiulis, muskusas, kašmyro mediena",
+      "Viršutinės natos: citrusai, obuoliai, levanda. Vidurinės natos: violetiniai lapeliai, magnolija. Pagrindinės natos: pačiulis, muskusas, kašmyro mediena.",
     color: "#3A4D50",
   },
 ];

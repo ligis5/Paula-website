@@ -12,7 +12,13 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img src={paulaLogo} alt="O'LÀ Fragrances Logo" className="logo-image" />
+      <Link to="/" onClick={closeMenu}>
+        <img
+          src={paulaLogo}
+          alt="O'LÀ Fragrances Logo"
+          className="logo-image"
+        />
+      </Link>
 
       <button
         className="hamburger-btn"

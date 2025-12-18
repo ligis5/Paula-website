@@ -33,7 +33,7 @@ padding-top: 80px;
     background-color: rgba(0, 0, 0, 0);
     margin-top: 2rem;
 }
-.products-cards-container{
+.žvakės-cards-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -52,7 +52,7 @@ padding-top: 80px;
         margin-top: 1rem;
         text-align: center;
     }
-    .products-cards-container{
+    .žvakės-cards-container{
         padding-top: 0;
         padding-bottom: 6vh;
     }
@@ -61,7 +61,7 @@ padding-top: 80px;
     .produktai-background-effects{
         padding-top: 0;
     }
-    .products-cards-container{
+    .žvakės-cards-container{
         display: flex;
         justify-content: flex-start;
         flex-wrap: nowrap;

@@ -1,11 +1,18 @@
 import "./Product.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Product = ({ product }) => {
   const navigate = useNavigate();
+  const [quantity, setQuantity] = useState(0);
 
   const handleClick = () => {
     navigate(`/produktai/${product.id}`);
+  };
+
+  const changeQuantity = (delta) => (event) => {
+    event.stopPropagation();
+    setQuantity((prev) => Math.max(0, prev + delta));
   };
 
   return (
@@ -18,9 +25,33 @@ const Product = ({ product }) => {
           {product.name}
         </h3>
         <p className="product-description">{product.description}</p>
-        <p id="text" className="product-price">
-          {product.price}€
-        </p>
+        <div className="product-bottom">
+          <p id="text" className="product-price">
+            {product.price}€
+          </p>
+          <div className="cart-controls">
+            <span id="text" className="cart-label">
+              Pridėti į krepšelį
+            </span>
+            <div className="qty-controls">
+              <button
+                type="button"
+                className="qty-btn"
+                onClick={changeQuantity(-1)}
+              >
+                -1
+              </button>
+              <span className="qty-value">{quantity}</span>
+              <button
+                type="button"
+                className="qty-btn"
+                onClick={changeQuantity(1)}
+              >
+                +1
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,13 +1,11 @@
 .produktai-container{
     min-height: 100vh;
-    max-height: fit-content;
     width: 100%;
 }
 .produktai-background-effects{
     display: flex;
     width: 100%;
-    min-height: 100vh;
-    max-height: fit-content;
+    height: 100%;  /* fill the container */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,14 +32,41 @@ padding-top: 80px;
     margin-top: 2rem;
 }
 .žvakės-cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2vw;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
     width: 100%;
     height: 100%;
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+/* Make product cards fill their grid column */
+.žvakės-cards-container .product-detail-card{
+    width: auto;           /* override 70% from detail view */
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;      /* ensure inner content cannot escape */
+}
+
+/* Center the last lone card when the total count is odd */
+.žvakės-cards-container > .product-detail-card:last-child:nth-child(odd){
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 70%;
+    max-width: 800px;
+}
+
+/* In list view, stack image and info vertically */
+.žvakės-cards-container .product-detail-content{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Allow grid children to shrink properly to avoid overflow */
+.žvakės-cards-container .product-detail-content > *{
+    min-width: 0;
 }
 @media (max-width: 750px){
     .produktai-name{
@@ -62,10 +87,21 @@ padding-top: 80px;
         padding-top: 0;
     }
     .žvakės-cards-container{
-        display: flex;
-        justify-content: flex-start;
+        display: flex;              
         flex-wrap: nowrap;
-        overflow-x: scroll;
-    overflow-y: hidden;
+        gap: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        /* pad inline so the first card starts centered in the viewport */
+        padding-inline: max(0px, calc((100% - 85%)/2));
+        overflow-x: auto; 
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    .žvakės-cards-container .product-detail-card{
+        flex: 0 0 85%;           
+        max-width: 85%;
+        scroll-snap-align: center;
     }
 }

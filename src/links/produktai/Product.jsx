@@ -16,39 +16,60 @@ const Product = ({ product }) => {
   };
 
   return (
-    <div className="product-card" onClick={handleClick}>
-      <div className="image-container">
-        <img src={product.image} alt={product.name} className="product-image" />
-      </div>
-      <div className="product-info" style={{ backgroundColor: product.color }}>
-        <h3 id="text" className="product-name">
-          {product.name}
-        </h3>
-        <p className="product-description">{product.description}</p>
-        <div className="product-bottom">
-          <p id="text" className="product-price">
-            {product.price}€
+    <div
+      className="product-detail-card"
+      onClick={handleClick}
+      style={{ borderColor: product.color, margin: "2rem" }}
+    >
+      <div className="product-detail-content" style={{ height: "100%" }}>
+        <div
+          className="product-detail-image"
+          style={{
+            height: "fit-content",
+          }}
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            style={{ height: "500px", minWidth: "250px", objectFit: "contain" }}
+          />
+        </div>
+        <div
+          className="product-detail-info"
+          style={{
+            height: "100%",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+          }}
+        >
+          <h1 className="product-detail-title">{product.name}</h1>
+          <p className="product-detail-description">{product.description}</p>
+          <p className="product-detail-description-secondary">
+            {product.description2}
           </p>
-          <div className="cart-controls">
-            <span id="text" className="cart-label">
-              Pridėti į krepšelį
-            </span>
-            <div className="qty-controls">
-              <button
-                type="button"
-                className="qty-btn"
-                onClick={changeQuantity(-1)}
-              >
-                -1
-              </button>
-              <span className="qty-value">{quantity}</span>
-              <button
-                type="button"
-                className="qty-btn"
-                onClick={changeQuantity(1)}
-              >
-                +1
-              </button>
+          <div className="product-detail-footer">
+            <span className="product-detail-price">{product.price}€</span>
+            <div className="cart-controls">
+              <span id="text" className="cart-label">
+                PRIDĖTI Į KREPŠELĮ:
+              </span>
+              <div className="qty-controls">
+                <button
+                  type="button"
+                  className="qty-btn"
+                  onClick={changeQuantity(-1)}
+                >
+                  -1
+                </button>
+                <span className="qty-value">{quantity}</span>
+                <button
+                  type="button"
+                  className="qty-btn"
+                  onClick={changeQuantity(1)}
+                >
+                  +1
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -33,4 +33,30 @@ a{
   height: max-content;
 }
 
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1714;
+  border-left: 1px solid #D4AF37;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c2b68e, #d1b558 25%, #D4AF37 50%, #d1b558 75%, #c2b68e 100%);
+  border-radius: 6px;
+  border: 2px solid #1a1714;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 #1a1714;
+}
+
 

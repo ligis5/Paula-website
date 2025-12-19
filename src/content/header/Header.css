@@ -7,6 +7,7 @@
     justify-content: space-between;
     background: #231f1e;
     border-bottom: 2px solid #D4AF37;
+    z-index: 10000;
 }
 .logo-image{
     width: 80px;

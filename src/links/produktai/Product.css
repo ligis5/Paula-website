@@ -1,35 +1,10 @@
 .product-card{
-  width: 500px;
-  height: auto;
-  border: 2px solid #D4AF37;
-  cursor: pointer;
-  border-radius: 50px;
+  width: 45%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-.image-container{
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid #D4AF37;
-}
-.product-image{
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-  border-radius: 50px 50px 0 0;
-}
-.product-info{
-  padding: 1rem;
-  min-width: calc(100% - 2rem);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 0 0 50px 50px;
 }
 .product-bottom{
   display: flex;
@@ -41,118 +16,64 @@
 .cart-controls{
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   color: white;
   font-family: "Montserrat", sans-serif;
+  width: 100%;
 }
 .cart-label{
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   white-space: nowrap;
+  color: #d4af37;
+  letter-spacing: 0.5px;
 }
 .qty-controls{
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  background: rgba(0, 0, 0, 0.25);
-  padding: 0.35rem 0.5rem;
-  border-radius: 999px;
-  border: 1px solid #d4af37;
+  gap: 0.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .qty-btn{
   background: #d4af37;
   color: black;
-  border: none;
-  padding: 0.35rem 0.6rem;
+  border: 1px solid #d4af37;
+  padding: 0.5rem 0.75rem;
   font-weight: 700;
-  font-size: 0.9rem;
-  border-radius: 999px;
+  font-size: 0.95rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 120ms ease, box-shadow 120ms ease;
+  transition: all 150ms ease;
+  font-family: "Montserrat", sans-serif;
+  min-width: 2.2rem;
+  text-align: center;
 }
 .qty-btn:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+  background: #e8c547;
 }
 .qty-btn:active{
   transform: translateY(0);
-  box-shadow: none;
+  box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
 }
 .qty-value{
-  min-width: 1.5rem;
+  min-width: 2rem;
   text-align: center;
   font-weight: 700;
   color: #d4af37;
-}
-.product-name{
-  font-family: "GFS Didot", serif;
-  font-size: 2rem;
-  font-weight: lighter;
-  text-shadow: 1px 1px rgba(245, 245, 245, 0.342);
-  margin: 0;
-  width: fit-content;
-  height: fit-content;
-  text-align: center;
-}
-.product-description{
-  font-family: "Montserrat", sans-serif;
-  text-shadow: 1px 1px rgba(245, 245, 245, 0.342);
-  font-size: 1.25rem;
-  width: auto;
-  height: fit-content;
-  color: #D4AF37;
-  background-image: linear-gradient(180deg, #c2b68e, #d1b558 25%, #D4AF37 50%, #d1b558 75%, #c2b68e 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.product-price{
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  width: 100%;
-  height: fit-content;
+  font-size: 1rem;
 }
 
-@media (max-width: 1100px) {
-  .product-card{
-    width: 70vw;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .product-info{
-    height: 20vh;
-    width: 45vw;
-  }
-
-}
 @media (max-width: 750px) {
-  .product-card{
-    width: 80vw;
-  }
-  .product-info{
-    height: 20vh;
-    width: fit-content;
-  }
- .image-container{
-    width: 100%;
-    height: auto;
-  }
-  .product-image{
-    width: 80vw;
-    height: 40vh;
-  }
-  .product-name{
-    font-size: 1.5rem;
-  }
-  .product-description{
-    font-size: 1rem;
-    margin: 0;
-  }
-  .product-price{
-    font-size: 1.2rem;
+  .žvakės-cards-container > .product-detail-card{
+    min-width: 90% !important;
+    margin: 1rem !important;
   }
   .cart-label{
     display: none;

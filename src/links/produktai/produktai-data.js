@@ -72,25 +72,24 @@ const produktaiData = [
     {
       id: "ruby-drift",
       name: "Ruby Drift",
-      description: "Prabangus rytietiškai gėlių ir medienos aromatas.",
+      description: "Oriental floral, Unisex - 50ml",
       description2:
-        "Ruby Drift – tai jausmingas ir rafinuotas kvapas, kuriame rytietiška prabanga susilieja su švara. Atsiveria sodrus šafrano prieskonis ir švelnus jazminas, suteikiantys elegantišką, pradžią. Širdyje skleidžiasi šilta ambra ir ambros medis, papildyti mineraliniu ambros atspalviu bei lengva hediono gaiva, kuri kvapui suteikia skaidrumo ir modernumo. Pagrindas gilus ir sodrus – dervingi eglės sakai, sausas kedras, ambroksano švara, subtilus cukraus saldumas ir žemiškas ąžuolo samanų akcentas. Tai kvapas, kuris tuo pačiu metu yra išraiškingas, jausmingas ir šiuolaikiškai prabangus.",
+        "Prabangus rytietiškas, šiltas ir jausmingas aromatas kurio pagrindą sudaro mediena ir lengvas saldumas",
       price: "48,50",
       image: require("../../content/images/ruby-drift.jpg"),
       about:
-        "Viršutinės natos: šafranas, jazminas. Širdies natos: ambros medis, ambra, hedionas. Pagrindinės natos: eglės sakai, kedras, cukrus, ambroksanas, ąžuolo samanos.",
+        "Viršutinės natos: šafranas, jazminas, Širdies natos: ambros medis, ambra, hedionas, Pagrindinės natos: eglės sakai, kedras, cukrus, ambroksanas, ąžuolo samanos",
     },
     {
       id: "honey-drops",
       name: "Honey Drops",
-      description:
-        "Ikoniškas citrusinis gurmaniškas kvapas, traukiantis nuo pirmos natos.",
+      description: "Citrus Gourmand, Unisex – 50 ml",
       description2:
-        "Honey Drops – charizmatiškas ir nepamirštamas kvapas, kuris vienodai užburia tiek moteris, tiek vyrus. Gaivi citrina ir bergamotė susilieja su šilta levanda, sukurdamos švarų, bet kartu viliojantį atidarymą. Širdyje atsiskleidžia saldžiai prieskingas akordas – jazminas sambac, cinamonas, minkštas kašmyras ir sodrus medaus saldumas, suteikiantys kvapui šilumos ir gylio. Pagrindas kremiškas ir brandus – vanilė, švelniai kartoki tabako lapai ir tonka pupelių šiluma palieka ilgai išliekantį, subtiliai dūminį pėdsaką. Tai kvapas, kuris tampa parašu – drąsus, elegantiškas ir nepaprastai traukiantis.",
+        "Stiprus ir charizmatiškas aromatas, kuriame dominuoja medaus ir kašmyro natos. Jaučiamas kontrastas tarp gaivios citrinos ir saldaus medaus, o tonka pupelės išlieka ilgai, suteikdamos kremiškumo ir gilumo",
       price: "48,50",
       image: require("../../content/images/honey-drops.jpg"),
       about:
-        "Viršutinės natos: citrina, levanda, bergamotė. Širdies natos: jazminas sambac, cinamonas, kašmyras, medus. Pagrindinės natos: vanilė, tabako lapai, tonka pupelė.",
+        "Viršutinės natos: citrina, levanda, bergamotė, Širdies natos: jazminas sambac, cinamonas, kašmyras, medus, Pagrindinės natos: vanilė, tabako lapai, tonka pupelė",
     },
   ],
 ];

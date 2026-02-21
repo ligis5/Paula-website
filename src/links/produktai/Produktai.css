@@ -31,7 +31,7 @@ padding-top: 80px;
     background-color: rgba(0, 0, 0, 0);
     margin-top: 2rem;
 }
-.žvakės-cards-container{
+.cards-container{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
@@ -42,7 +42,7 @@ padding-top: 80px;
 }
 
 /* Make product cards fill their grid column */
-.žvakės-cards-container .product-detail-card{
+.cards-container .product-detail-card{
     width: auto;           /* override 70% from detail view */
     max-width: 100%;
     box-sizing: border-box;
@@ -51,7 +51,7 @@ padding-top: 80px;
 }
 
 /* Center the last lone card when the total count is odd */
-.žvakės-cards-container > .product-detail-card:last-child:nth-child(odd){
+.cards-container > .product-detail-card:last-child:nth-child(odd){
     grid-column: 1 / -1;
     justify-self: center;
     width: 70%;
@@ -59,14 +59,37 @@ padding-top: 80px;
 }
 
 /* In list view, stack image and info vertically */
-.žvakės-cards-container .product-detail-content{
+.cards-container .product-detail-content{
+    display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
 /* Allow grid children to shrink properly to avoid overflow */
-.žvakės-cards-container .product-detail-content > *{
+.cards-container .product-detail-content > *{
     min-width: 0;
+}
+
+/* Ensure text elements wrap properly in card grid layout */
+.cards-container .product-detail-title,
+.cards-container .product-detail-description,
+.cards-container .product-detail-description-secondary {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+/* Ensure info section can shrink with its content */
+.cards-container .product-detail-info {
+    min-width: 0;
+}
+
+/* Ensure image container fits within grid cell */
+.cards-container .product-detail-image {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
 }
 @media (max-width: 750px){
     .produktai-name{
@@ -77,16 +100,16 @@ padding-top: 80px;
         margin-top: 1rem;
         text-align: center;
     }
-    .žvakės-cards-container{
+    .cards-container{
         padding-top: 0;
         padding-bottom: 6vh;
     }
 }
-@media (max-width: 1100px){
+@media (max-width: 1200px){
     .produktai-background-effects{
         padding-top: 0;
     }
-    .žvakės-cards-container{
+    .cards-container{
         display: flex;              
         flex-wrap: nowrap;
         gap: 1rem;
@@ -99,7 +122,7 @@ padding-top: 80px;
         -webkit-overflow-scrolling: touch;
         scroll-snap-type: x mandatory;
     }
-    .žvakės-cards-container .product-detail-card{
+    .cards-container .product-detail-card{
         flex: 0 0 85%;           
         max-width: 85%;
         scroll-snap-align: center;

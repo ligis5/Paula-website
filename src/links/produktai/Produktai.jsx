@@ -16,27 +16,27 @@ const Produktai = () => {
       <div className="produktai-background-effects">
         <>
           <h1 id="text" className="produktai-name">
-            Žvakės
-          </h1>
-          <p id="text" className="produktai-about">
-            Liepsna ir kvapas – tobula harmonija jūsų namams.
-          </p>
-          <div className="žvakės-cards-container">
-            {produktaiData[0].map((product) => (
-              <Product key={product.id} product={product} />
-            ))}
-          </div>
-        </>
-        <>
-          <h1 id="text" className="produktai-name">
             Kvepalai
           </h1>
           <p id="text" className="produktai-about">
             Unikalūs, rankų darbo kvepalai, sukurti iš aukščiausios kokybės
             ingredientų.
           </p>
-          <div className="žvakės-cards-container">
+          <div className="cards-container">
             {produktaiData[1].map((product) => (
+              <Product key={product.id} product={product} />
+            ))}
+          </div>
+        </>
+        <>
+          <h1 id="text" className="produktai-name">
+            Žvakės
+          </h1>
+          <p id="text" className="produktai-about">
+            Liepsna ir kvapas – tobula harmonija jūsų namams.
+          </p>
+          <div className="cards-container">
+            {produktaiData[0].map((product) => (
               <Product key={product.id} product={product} />
             ))}
           </div>

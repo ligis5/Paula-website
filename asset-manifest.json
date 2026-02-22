@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/ligis5/Paula-website/static/css/main.42401b20.css",
-    "main.js": "/ligis5/Paula-website/static/js/main.672b0719.js",
-    "static/js/453.890a2c65.chunk.js": "/ligis5/Paula-website/static/js/453.890a2c65.chunk.js",
-    "static/media/cashmere-wood.png": "/ligis5/Paula-website/static/media/cashmere-wood.bef08ed303533f92c90b.png",
-    "static/media/padaryta-foto-2.png": "/ligis5/Paula-website/static/media/padaryta-foto-2.8d4002e1eff259f6a022.png",
-    "static/media/ola_logo_name.png": "/ligis5/Paula-website/static/media/ola_logo_name.3797f32328e29a14a8a3.png",
-    "static/media/black-amber.jpeg": "/ligis5/Paula-website/static/media/black-amber.a2654a0380dc597020fe.jpeg",
-    "static/media/sweet-cherry.jpeg": "/ligis5/Paula-website/static/media/sweet-cherry.fb1fcbac5d12963444b8.jpeg",
-    "static/media/rosewood-glow.jpeg": "/ligis5/Paula-website/static/media/rosewood-glow.87d2c4fd4de990c50c54.jpeg",
-    "static/media/sacred-wood.jpg": "/ligis5/Paula-website/static/media/sacred-wood.a9b77a6be0a20fba0fa6.jpg",
-    "static/media/honey-drops.jpg": "/ligis5/Paula-website/static/media/honey-drops.c0cb89c8223b4aaf159b.jpg",
-    "static/media/ruby-drift.jpg": "/ligis5/Paula-website/static/media/ruby-drift.551c2ef15b66f7a9d626.jpg",
-    "static/media/ola_logo.png": "/ligis5/Paula-website/static/media/ola_logo.2ab1bda71aac498d7f90.png",
-    "static/media/insta.svg": "/ligis5/Paula-website/static/media/insta.3c1b02c890fcf60e23045220aa852085.svg",
-    "static/media/f.svg": "/ligis5/Paula-website/static/media/f.bfb0e54df102805ff1370395a5ca7ee0.svg",
-    "index.html": "/ligis5/Paula-website/index.html",
-    "static/media/hamburger-menu.svg": "/ligis5/Paula-website/static/media/hamburger-menu.5455d5b72c2958425c37df633a10070b.svg",
-    "main.42401b20.css.map": "/ligis5/Paula-website/static/css/main.42401b20.css.map",
-    "main.672b0719.js.map": "/ligis5/Paula-website/static/js/main.672b0719.js.map",
-    "453.890a2c65.chunk.js.map": "/ligis5/Paula-website/static/js/453.890a2c65.chunk.js.map"
+    "main.css": "/%7BPaula-website%7D/static/css/main.42401b20.css",
+    "main.js": "/%7BPaula-website%7D/static/js/main.27494ca1.js",
+    "static/js/453.890a2c65.chunk.js": "/%7BPaula-website%7D/static/js/453.890a2c65.chunk.js",
+    "static/media/cashmere-wood.png": "/%7BPaula-website%7D/static/media/cashmere-wood.bef08ed303533f92c90b.png",
+    "static/media/padaryta-foto-2.png": "/%7BPaula-website%7D/static/media/padaryta-foto-2.8d4002e1eff259f6a022.png",
+    "static/media/ola_logo_name.png": "/%7BPaula-website%7D/static/media/ola_logo_name.3797f32328e29a14a8a3.png",
+    "static/media/black-amber.jpeg": "/%7BPaula-website%7D/static/media/black-amber.a2654a0380dc597020fe.jpeg",
+    "static/media/sweet-cherry.jpeg": "/%7BPaula-website%7D/static/media/sweet-cherry.fb1fcbac5d12963444b8.jpeg",
+    "static/media/rosewood-glow.jpeg": "/%7BPaula-website%7D/static/media/rosewood-glow.87d2c4fd4de990c50c54.jpeg",
+    "static/media/sacred-wood.jpg": "/%7BPaula-website%7D/static/media/sacred-wood.a9b77a6be0a20fba0fa6.jpg",
+    "static/media/honey-drops.jpg": "/%7BPaula-website%7D/static/media/honey-drops.c0cb89c8223b4aaf159b.jpg",
+    "static/media/ruby-drift.jpg": "/%7BPaula-website%7D/static/media/ruby-drift.551c2ef15b66f7a9d626.jpg",
+    "static/media/ola_logo.png": "/%7BPaula-website%7D/static/media/ola_logo.2ab1bda71aac498d7f90.png",
+    "static/media/insta.svg": "/%7BPaula-website%7D/static/media/insta.3c1b02c890fcf60e23045220aa852085.svg",
+    "static/media/f.svg": "/%7BPaula-website%7D/static/media/f.bfb0e54df102805ff1370395a5ca7ee0.svg",
+    "index.html": "/%7BPaula-website%7D/index.html",
+    "static/media/hamburger-menu.svg": "/%7BPaula-website%7D/static/media/hamburger-menu.5455d5b72c2958425c37df633a10070b.svg",
+    "main.42401b20.css.map": "/%7BPaula-website%7D/static/css/main.42401b20.css.map",
+    "main.27494ca1.js.map": "/%7BPaula-website%7D/static/js/main.27494ca1.js.map",
+    "453.890a2c65.chunk.js.map": "/%7BPaula-website%7D/static/js/453.890a2c65.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42401b20.css",
-    "static/js/main.672b0719.js"
+    "static/js/main.27494ca1.js"
   ]
 }

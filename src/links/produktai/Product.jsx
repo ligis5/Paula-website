@@ -1,18 +1,22 @@
 import "./Product.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useBasket } from "../../content/basket/useBasket";
 
 const Product = ({ product }) => {
   const navigate = useNavigate();
-  const [quantity, setQuantity] = useState(0);
+  const { basketItems, addToBasket } = useBasket();
 
   const handleClick = () => {
     navigate(`/produktai/${product.id}`);
   };
 
+  const existing = basketItems.find((i) => i.name === product.name);
+  const quantity = existing ? existing.quantity : 0;
+
   const changeQuantity = (delta) => (event) => {
     event.stopPropagation();
-    setQuantity((prev) => Math.max(0, prev + delta));
+    const newQty = Math.max(0, quantity + delta);
+    addToBasket(product.name, newQty);
   };
 
   return (

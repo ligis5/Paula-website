@@ -2,8 +2,12 @@ import "./Produktai.css";
 import Product from "./Product";
 import produktaiData from "./produktai-data";
 import bgImage from "../../content/images/gallery/padaryta-foto-2.png";
+import Basket from "../../content/basket/Basket";
+import { useBasket } from "../../content/basket/useBasket";
 
 const Produktai = () => {
+  const { basketItems, addToBasket } = useBasket();
+
   return (
     <div
       className="produktai-container"
@@ -13,6 +17,7 @@ const Produktai = () => {
         backgroundPosition: "center",
       }}
     >
+      <Basket basketItems={basketItems} />
       <div className="produktai-background-effects">
         <>
           <h1 id="text" className="produktai-name">
@@ -24,7 +29,11 @@ const Produktai = () => {
           </p>
           <div className="cards-container">
             {produktaiData[1].map((product) => (
-              <Product key={product.id} product={product} />
+              <Product
+                key={product.id}
+                product={product}
+                addToBasket={addToBasket}
+              />
             ))}
           </div>
         </>
@@ -37,7 +46,11 @@ const Produktai = () => {
           </p>
           <div className="cards-container">
             {produktaiData[0].map((product) => (
-              <Product key={product.id} product={product} />
+              <Product
+                key={product.id}
+                product={product}
+                addToBasket={addToBasket}
+              />
             ))}
           </div>
         </>

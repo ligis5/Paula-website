@@ -2,10 +2,13 @@ import "./ProductDetail.css";
 import { useParams, useNavigate } from "react-router-dom";
 import produktaiData from "./produktai-data";
 import bgImage from "../../content/images/gallery/padaryta-foto-2.png";
+import Product from "./Product";
+import { useBasket } from "../../content/basket/useBasket";
 
 const ProductDetail = () => {
   const { productId } = useParams();
   const navigate = useNavigate();
+  const { addToBasket } = useBasket();
 
   // Flatten the nested array structure and find the product
   const allProducts = produktaiData.flat();
@@ -43,38 +46,13 @@ const ProductDetail = () => {
       }}
     >
       <div className="product-detail-background-effects">
-        <div
-          className="product-detail-card"
-          style={{ borderColor: product.color }}
+        <Product key={product.id} product={product} addToBasket={addToBasket} />
+        <button
+          className="product-detail-back-btn"
+          onClick={() => navigate("/produktai")}
         >
-          <div className="product-detail-content">
-            <div className="product-detail-image">
-              <img src={product.image} alt={product.name} />
-            </div>
-            <div className="product-detail-info">
-              <h1 className="product-detail-title">{product.name}</h1>
-              <p className="product-detail-description">
-                {product.description}
-              </p>
-              <p className="product-detail-description-secondary">
-                {product.description2}
-              </p>
-              <div className="product-detail-about">
-                <h3>Sudėtis:</h3>
-                <p>{product.about}</p>
-              </div>
-              <div className="product-detail-footer">
-                <span className="product-detail-price">{product.price}€</span>
-                <button
-                  className="product-detail-back-btn"
-                  onClick={() => navigate("/produktai")}
-                >
-                  Grįžti
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+          Grįžti
+        </button>
       </div>
     </div>
   );

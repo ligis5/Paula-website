@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Paula-website/static/css/main.42401b20.css",
-    "main.js": "/Paula-website/static/js/main.3de1b3b9.js",
+    "main.js": "/Paula-website/static/js/main.c9b9a2cc.js",
     "static/js/453.890a2c65.chunk.js": "/Paula-website/static/js/453.890a2c65.chunk.js",
     "static/media/cashmere-wood.png": "/Paula-website/static/media/cashmere-wood.bef08ed303533f92c90b.png",
     "static/media/padaryta-foto-2.png": "/Paula-website/static/media/padaryta-foto-2.8d4002e1eff259f6a022.png",
@@ -18,11 +18,11 @@
     "index.html": "/Paula-website/index.html",
     "static/media/hamburger-menu.svg": "/Paula-website/static/media/hamburger-menu.5455d5b72c2958425c37df633a10070b.svg",
     "main.42401b20.css.map": "/Paula-website/static/css/main.42401b20.css.map",
-    "main.3de1b3b9.js.map": "/Paula-website/static/js/main.3de1b3b9.js.map",
+    "main.c9b9a2cc.js.map": "/Paula-website/static/js/main.c9b9a2cc.js.map",
     "453.890a2c65.chunk.js.map": "/Paula-website/static/js/453.890a2c65.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42401b20.css",
-    "static/js/main.3de1b3b9.js"
+    "static/js/main.c9b9a2cc.js"
   ]
 }

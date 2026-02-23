@@ -55,15 +55,8 @@ const Produktai = () => {
       return;
     }
 
-    const firstCard = row.querySelector(".product-detail-card");
-    const rowStyles = window.getComputedStyle(row);
-    const gap = parseFloat(rowStyles.columnGap || rowStyles.gap || "0") || 0;
-    const step = firstCard
-      ? firstCard.getBoundingClientRect().width + gap
-      : row.clientWidth * 0.85;
-
     row.scrollBy({
-      left: step * direction,
+      left: row.clientWidth * 0.7 * direction,
       behavior: "smooth",
     });
   }, []);

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Paula-website/static/css/main.e3b87b9e.css",
-    "main.js": "/Paula-website/static/js/main.c9b9a2cc.js",
+    "main.css": "/Paula-website/static/css/main.c07f71bc.css",
+    "main.js": "/Paula-website/static/js/main.ff50df88.js",
     "static/js/453.890a2c65.chunk.js": "/Paula-website/static/js/453.890a2c65.chunk.js",
     "static/media/cashmere-wood.png": "/Paula-website/static/media/cashmere-wood.bef08ed303533f92c90b.png",
     "static/media/padaryta-foto-2.png": "/Paula-website/static/media/padaryta-foto-2.8d4002e1eff259f6a022.png",
@@ -14,15 +14,19 @@
     "static/media/ruby-drift.jpg": "/Paula-website/static/media/ruby-drift.551c2ef15b66f7a9d626.jpg",
     "static/media/ola_logo.png": "/Paula-website/static/media/ola_logo.2ab1bda71aac498d7f90.png",
     "static/media/insta.svg": "/Paula-website/static/media/insta.3c1b02c890fcf60e23045220aa852085.svg",
+    "static/media/shopping-cart-close.svg": "/Paula-website/static/media/shopping-cart-close.33dcfc8f3a54d9b3a485b75c5d31343a.svg",
+    "static/media/shopping-cart-open.svg": "/Paula-website/static/media/shopping-cart-open.2053f994f1ea22cc5019514defdce7bb.svg",
     "static/media/f.svg": "/Paula-website/static/media/f.bfb0e54df102805ff1370395a5ca7ee0.svg",
+    "static/media/arrow-left.svg": "/Paula-website/static/media/arrow-left.2549be6846f0081a6e7d32df2fda876e.svg",
+    "static/media/arrow-right.svg": "/Paula-website/static/media/arrow-right.10386a59d8cd412308a23fa42908e30e.svg",
     "index.html": "/Paula-website/index.html",
     "static/media/hamburger-menu.svg": "/Paula-website/static/media/hamburger-menu.5455d5b72c2958425c37df633a10070b.svg",
-    "main.e3b87b9e.css.map": "/Paula-website/static/css/main.e3b87b9e.css.map",
-    "main.c9b9a2cc.js.map": "/Paula-website/static/js/main.c9b9a2cc.js.map",
+    "main.c07f71bc.css.map": "/Paula-website/static/css/main.c07f71bc.css.map",
+    "main.ff50df88.js.map": "/Paula-website/static/js/main.ff50df88.js.map",
     "453.890a2c65.chunk.js.map": "/Paula-website/static/js/453.890a2c65.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3b87b9e.css",
-    "static/js/main.c9b9a2cc.js"
+    "static/css/main.c07f71bc.css",
+    "static/js/main.ff50df88.js"
   ]
 }

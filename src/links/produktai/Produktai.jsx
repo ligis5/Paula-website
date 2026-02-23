@@ -48,6 +48,26 @@ const Produktai = () => {
     });
   }, []);
 
+  const scrollCards = useCallback((index, direction) => {
+    const row = cardRowRefs.current[index];
+
+    if (!row) {
+      return;
+    }
+
+    const firstCard = row.querySelector(".product-detail-card");
+    const rowStyles = window.getComputedStyle(row);
+    const gap = parseFloat(rowStyles.columnGap || rowStyles.gap || "0") || 0;
+    const step = firstCard
+      ? firstCard.getBoundingClientRect().width + gap
+      : row.clientWidth * 0.85;
+
+    row.scrollBy({
+      left: step * direction,
+      behavior: "smooth",
+    });
+  }, []);
+
   useEffect(() => {
     const refreshAllHints = () => {
       cardRowRefs.current.forEach((row, index) => {
@@ -91,6 +111,7 @@ const Produktai = () => {
               className={`cards-scroll-arrow cards-scroll-arrow-left ${
                 scrollHints[0]?.showLeft ? "" : "cards-scroll-arrow-hidden"
               }`}
+              onClick={() => scrollCards(0, -1)}
             />
             <div
               className="cards-container"
@@ -113,6 +134,7 @@ const Produktai = () => {
               className={`cards-scroll-arrow cards-scroll-arrow-right ${
                 scrollHints[0]?.showRight ? "" : "cards-scroll-arrow-hidden"
               }`}
+              onClick={() => scrollCards(0, 1)}
             />
           </div>
         </>
@@ -130,6 +152,7 @@ const Produktai = () => {
               className={`cards-scroll-arrow cards-scroll-arrow-left ${
                 scrollHints[1]?.showLeft ? "" : "cards-scroll-arrow-hidden"
               }`}
+              onClick={() => scrollCards(1, -1)}
             />
             <div
               className="cards-container"
@@ -152,6 +175,7 @@ const Produktai = () => {
               className={`cards-scroll-arrow cards-scroll-arrow-right ${
                 scrollHints[1]?.showRight ? "" : "cards-scroll-arrow-hidden"
               }`}
+              onClick={() => scrollCards(1, 1)}
             />
           </div>
         </>

@@ -16,7 +16,7 @@ const Product = ({ product }) => {
   const changeQuantity = (delta) => (event) => {
     event.stopPropagation();
     const newQty = Math.max(0, quantity + delta);
-    addToBasket(product.name, newQty);
+    addToBasket(product.name, newQty, product.price);
   };
 
   return (

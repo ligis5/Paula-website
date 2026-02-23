@@ -31,6 +31,19 @@ padding-top: 80px;
     background-color: rgba(0, 0, 0, 0);
     margin-top: 2rem;
 }
+.product-section{
+    width: 100%;
+}
+.cards-scroll-wrapper{
+    width: 100%;
+    position: relative;
+}
+.cards-scroll-arrow{
+    display: none;
+}
+.cards-scroll-arrow-hidden{
+    display: none !important;
+}
 .cards-container{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -93,7 +106,7 @@ padding-top: 80px;
 }
 @media (max-width: 750px){
     .produktai-name{
-        margin-top: 0;
+        margin-top: 2vh;
         margin-bottom: 0;
     }
     .produktai-about{
@@ -109,18 +122,34 @@ padding-top: 80px;
     .produktai-background-effects{
         padding-top: 0;
     }
+    .cards-scroll-arrow{
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+        z-index: 3;
+        pointer-events: none;
+        opacity: 0.92;
+    }
+    .cards-scroll-arrow-left{
+        left: 0.5rem;
+    }
+    .cards-scroll-arrow-right{
+        right: 0.5rem;
+    }
     .cards-container{
         display: flex;              
         flex-wrap: nowrap;
         gap: 1rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        /* pad inline so the first card starts centered in the viewport */
-        padding-inline: max(0px, calc((100% - 85%)/2));
         overflow-x: auto; 
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
+        scroll-snap-type: both mandatory;
+        scroll-snap-align: center;
     }
     .cards-container .product-detail-card{
         flex: 0 0 85%;           

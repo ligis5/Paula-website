@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
 const BasketContext = createContext();
 
@@ -8,20 +8,22 @@ const BasketContext = createContext();
 export const BasketProvider = ({ children }) => {
   const [basketItems, setBasketItems] = useState([]);
 
-  const addToBasket = (productName, quantity) => {
+  const addToBasket = (productName, quantity, price) => {
     setBasketItems((prev) => {
       const existingItem = prev.find((item) => item.name === productName);
+      // remove when quantity is zero or less
+      if (quantity <= 0) {
+        return prev.filter((item) => item.name !== productName);
+      }
       if (existingItem) {
         return prev.map((item) =>
           item.name === productName
-            ? { name: item.name, quantity: quantity }
+            ? { name: item.name, quantity: quantity, price: price }
             : item,
         );
-      } else if (quantity > 0) {
-        return [...prev, { name: productName, quantity }];
-      } else {
-        return prev.filter((item) => item.name !== productName);
       }
+      // add new item when quantity > 0 and not existing
+      return [...prev, { name: productName, quantity, price: price }];
     });
   };
 
@@ -38,7 +40,7 @@ export const BasketProvider = ({ children }) => {
 export const useBasket = () => {
   const context = useContext(BasketContext);
   if (!context) {
-    throw new Error('useBasket must be used within BasketProvider');
+    throw new Error("useBasket must be used within BasketProvider");
   }
   return context;
 };

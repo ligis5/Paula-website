@@ -75,7 +75,7 @@ const produktaiData = [
       description: "Oriental floral, Unisex - 50ml",
       description2:
         "Prabangus rytietiškas, šiltas ir jausmingas aromatas kurio pagrindą sudaro mediena ir lengvas saldumas",
-      price: "48,50",
+      price: 48.5,
       image: require("../../content/images/ruby-drift.jpg"),
       about:
         "Viršutinės natos: šafranas, jazminas, Širdies natos: ambros medis, ambra, hedionas, Pagrindinės natos: eglės sakai, kedras, cukrus, ambroksanas, ąžuolo samanos",
@@ -86,7 +86,7 @@ const produktaiData = [
       description: "Citrus Gourmand, Unisex – 50 ml",
       description2:
         "Stiprus ir charizmatiškas aromatas, kuriame dominuoja medaus ir kašmyro natos. Jaučiamas kontrastas tarp gaivios citrinos ir saldaus medaus, o tonka pupelės išlieka ilgai, suteikdamos kremiškumo ir gilumo",
-      price: "48,50",
+      price: 48.5,
       image: require("../../content/images/honey-drops.jpg"),
       about:
         "Viršutinės natos: citrina, levanda, bergamotė, Širdies natos: jazminas sambac, cinamonas, kašmyras, medus, Pagrindinės natos: vanilė, tabako lapai, tonka pupelė",

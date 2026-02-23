@@ -7,7 +7,7 @@ import Footer from "./content/footer/Footer";
 import Produktai from "./links/produktai/Produktai";
 import ProductDetail from "./links/produktai/ProductDetail";
 import Kontaktai from "./links/kontaktai/Kontaktai";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { BasketProvider } from "./content/basket/useBasket";
 
 function App() {

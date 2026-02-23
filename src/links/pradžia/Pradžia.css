@@ -74,10 +74,15 @@ backdrop-filter: blur(8px);
     margin: 1rem;
 }
 }
+
 @media (max-width: 1100px) {
     .pradžia-container{
     height: calc(100vh - 80px - 7vh - 4px);
     width: 100%;
 }
-
+}
+@media (max-width: 700px) {
+    .about-container{
+    margin-bottom: 40px;
+}
 }

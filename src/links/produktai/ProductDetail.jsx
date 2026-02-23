@@ -26,8 +26,16 @@ const ProductDetail = () => {
       >
         <div className="product-detail-background-effects">
           <div className="product-detail-card">
-            <h2>Produktas nerasta</h2>
-            <button onClick={() => navigate("/produktai")}>
+            <h2
+              style={{ textAlign: "center" }}
+              className="product-detail-title"
+            >
+              Produktas nerastas
+            </h2>
+            <button
+              onClick={() => navigate("/produktai")}
+              className="product-detail-back-btn"
+            >
               Grįžti į produktus
             </button>
           </div>
@@ -45,7 +53,10 @@ const ProductDetail = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="product-detail-background-effects">
+      <div
+        className="product-detail-background-effects"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
         <Product key={product.id} product={product} addToBasket={addToBasket} />
         <button
           className="product-detail-back-btn"

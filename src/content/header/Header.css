@@ -67,7 +67,7 @@
     .header-categories{
         display: none;
         position: absolute;
-        top: 80px;
+        top: 82px;
         left: 0;
         width: 100%;
         flex-direction: column;
@@ -80,9 +80,11 @@
     }
     .header-categories.open{
         display: flex;
+        background: #231f1ef3;
+        border-bottom: 2px solid #D4AF37;
     }
     .category-item{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         color: #111;
     }
 }

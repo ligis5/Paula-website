@@ -7,10 +7,15 @@ import { useBasket } from "../../content/basket/useBasket";
 import arrowRight from "../../content/images/arrow-right.svg";
 import arrowLeft from "../../content/images/arrow-left.svg";
 
-const Produktai = () => {
+const Produktai = ({ language }) => {
   const { addToBasket } = useBasket();
   const cardRowRefs = useRef([]);
   const [scrollHints, setScrollHints] = useState({});
+  const [products, setProducts] = useState(produktaiData[language]);
+
+  useEffect(() => {
+    setProducts(produktaiData[language]);
+  }, [language]);
 
   const updateScrollHints = useCallback((index) => {
     const row = cardRowRefs.current[index];
@@ -18,6 +23,7 @@ const Produktai = () => {
     if (!row) {
       return;
     }
+
     // Hide arrow if the scroll is within 100px to the end
     const threshold = 100;
     const maxScrollLeft = row.scrollWidth - row.clientWidth;
@@ -83,9 +89,9 @@ const Produktai = () => {
     let mėginukas = {};
     mėginukas = {
       id: `mėginukas-${product.id}`,
-      name: `${product.name} mėginukas`,
+      name: `${product.name}`,
       price: 4.5,
-      ammount: "3ml",
+      size: "3ml",
     };
     return mėginukas;
   };
@@ -102,11 +108,10 @@ const Produktai = () => {
       <div className="produktai-background-effects">
         <>
           <h1 id="text" className="produktai-name">
-            Kvepalai
+            {products[2].productText}
           </h1>
           <p id="text" className="produktai-about">
-            Nišiniai kvepalai, įkvėpti garsiausių pasaulio aromatų, sukurti
-            profesionalių parfumerių su ilgamete patirtimi ir meile savo amatui.
+            {products[2].productAboutText}
           </p>
           <div className="cards-scroll-wrapper">
             <img
@@ -124,12 +129,13 @@ const Produktai = () => {
               }}
               onScroll={() => updateScrollHints(0)}
             >
-              {produktaiData[1].map((product) => (
+              {products[1].map((product) => (
                 <Product
                   key={product.id}
                   product={product}
                   addToBasket={addToBasket}
                   mėginukas={addSamplesToPerfumes}
+                  words={products[2]}
                 />
               ))}
             </div>
@@ -145,10 +151,12 @@ const Produktai = () => {
         </>
         <>
           <h1 id="text" className="produktai-name">
-            Žvakės
+            {products[2].productText}
           </h1>
           <p id="text" className="produktai-about">
-            Liepsna ir kvapas – tobula harmonija jūsų namams.
+            {language === "lithuanian"
+              ? products[2].productAboutText
+              : products[2].productAboutText}
           </p>
           <div className="cards-scroll-wrapper">
             <img
@@ -166,11 +174,12 @@ const Produktai = () => {
               }}
               onScroll={() => updateScrollHints(1)}
             >
-              {produktaiData[0].map((product) => (
+              {products[0].map((product) => (
                 <Product
                   key={product.id}
                   product={product}
                   addToBasket={addToBasket}
+                  words={products[2]}
                 />
               ))}
             </div>

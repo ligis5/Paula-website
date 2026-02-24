@@ -5,13 +5,13 @@ import bgImage from "../../content/images/gallery/padaryta-foto-2.png";
 import Product from "./Product";
 import { useBasket } from "../../content/basket/useBasket";
 
-const ProductDetail = () => {
+const ProductDetail = ({ language }) => {
   const { productId } = useParams();
   const navigate = useNavigate();
   const { addToBasket } = useBasket();
 
   // Flatten the nested array structure and find the product
-  const allProducts = produktaiData.flat();
+  const allProducts = produktaiData[language].flat();
   const product = allProducts.find((p) => p.id === productId);
 
   if (!product) {
@@ -30,13 +30,17 @@ const ProductDetail = () => {
               style={{ textAlign: "center" }}
               className="product-detail-title"
             >
-              Produktas nerastas
+              {language === "lithuanian"
+                ? "Produktas nerastas"
+                : "Product not found"}
             </h2>
             <button
               onClick={() => navigate("/produktai")}
               className="product-detail-back-btn"
             >
-              Grįžti į produktus
+              {language === "lithuanian"
+                ? "Grįžti į produktus"
+                : "Back to products"}
             </button>
           </div>
         </div>
@@ -57,12 +61,17 @@ const ProductDetail = () => {
         className="product-detail-background-effects"
         style={{ display: "flex", flexDirection: "column" }}
       >
-        <Product key={product.id} product={product} addToBasket={addToBasket} />
+        <Product
+          key={product.id}
+          product={product}
+          addToBasket={addToBasket}
+          words={allProducts.slice(-1)}
+        />
         <button
           className="product-detail-back-btn"
           onClick={() => navigate("/produktai")}
         >
-          Grįžti
+          {language === "lithuanian" ? "Grįžti į prekes" : "Back to products"}
         </button>
       </div>
     </div>

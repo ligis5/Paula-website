@@ -2,7 +2,7 @@ import "./Pradžia.css";
 import olaLogoName from "../../content/images/ola_logo_name.png";
 import bgImage from "../../content/images/gallery/padaryta-foto-2.png";
 
-const Pradžia = () => {
+const Pradžia = ({ language }) => {
   return (
     <div
       className="pradžia-container"
@@ -22,10 +22,14 @@ const Pradžia = () => {
         </div>
         <div className="about-container">
           <h3 id="text" className="about-ola-description">
-            Kvapo menas liepsnoje ir ant odos
+            {language === "lithuanian"
+              ? "Kvapo menas liepsnoje ir ant odos"
+              : "The art of fragrance in flame and on skin"}
           </h3>
           <h3 id="text" className="about-ola-description-2">
-            Rankų darbo žvakės ir kvepalai, įkvėpti garsių kūrėjų
+            {language === "lithuanian"
+              ? "Rankų darbo žvakės ir kvepalai, įkvėpti garsių kūrėjų"
+              : "Handmade candles and perfumes inspired by famous creators"}
           </h3>
         </div>
       </div>

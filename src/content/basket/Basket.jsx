@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import { useBasket } from "./useBasket";
 import ShopingCartClose from "../../content/images/shopping-cart-close.svg";
 import ShopingCartOpen from "../../content/images/shopping-cart-open.svg";
+import produktaiData from "../../links/produktai/produktai-data";
 
-const Basket = () => {
+const Basket = ({ language }) => {
   const { basketItems, addToBasket } = useBasket();
   const [isBasketOpen, setIsBasketOpen] = useState(true);
+  const allProducts = produktaiData[language].flat();
+  const words = allProducts.slice(-1);
   // Calculate the grand total by summing up the total price of each item (unit price * quantity)
   const grandTotal = basketItems.reduce((sum, item) => {
     const unitPrice = Number(item.price) || 0;
@@ -43,7 +46,7 @@ const Basket = () => {
       </button>
     );
   }
-
+  console.log("Basket items:", words);
   return (
     <div className="basket">
       <button
@@ -54,7 +57,7 @@ const Basket = () => {
       >
         <img className="basket-icon" src={ShopingCartClose} alt="Uždaryti" />
       </button>
-      <h2 className="basket-title">Krepšelis</h2>
+      <h2 className="basket-title">{words && words[0].basketText}</h2>
       {basketItems.length === 0 ? (
         <p className="basket-empty">Krepšelis tuščias</p>
       ) : (
@@ -69,10 +72,11 @@ const Basket = () => {
                   <div className="card-info">
                     <div className="card-name">{item.name}</div>
                     <div className="card-qty">
-                      Kiekis: <span className="qty-value">{item.quantity}</span>
+                      {words && words[0].basketText2}:{" "}
+                      <span className="qty-value">{item.quantity}</span>
                     </div>
                     <div className="card-total">
-                      Iš viso: €{itemTotal.toFixed(2)}
+                      {words && words[0].basketText4}: €{itemTotal.toFixed(2)}
                     </div>
                   </div>
                   <div className="card-controls">
@@ -103,7 +107,7 @@ const Basket = () => {
                         removeItem(item.name);
                       }}
                     >
-                      Pašalinti
+                      {words && words[0].basketText3}
                     </button>
                   </div>
                 </div>
@@ -111,7 +115,7 @@ const Basket = () => {
             })}
           </div>
           <div className="basket-grand-total">
-            Bendra suma: €{grandTotal.toFixed(2)}
+            {words && words[0].basketText5}: €{grandTotal.toFixed(2)}
           </div>
         </>
       )}

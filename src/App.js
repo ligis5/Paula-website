@@ -9,20 +9,31 @@ import ProductDetail from "./links/produktai/ProductDetail";
 import Kontaktai from "./links/kontaktai/Kontaktai";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { BasketProvider } from "./content/basket/useBasket";
+import { useState } from "react";
 
 function App() {
+  const [language, setLanguage] = useState("lithuanian");
   return (
     <div className="App">
       <Router>
         <BasketProvider>
-          <Header />
-          <Basket />
+          <Header changeLanguage={setLanguage} language={language} />
+          <Basket language={language} />
           <SideBar />
           <Routes>
-            <Route path="/" element={<Pradžia />} />
-            <Route path="/produktai" element={<Produktai />} />
-            <Route path="/produktai/:productId" element={<ProductDetail />} />
-            <Route path="/kontaktai" element={<Kontaktai />} />
+            <Route path="/" element={<Pradžia language={language} />} />
+            <Route
+              path="/produktai"
+              element={<Produktai language={language} />}
+            />
+            <Route
+              path="/produktai/:productId"
+              element={<ProductDetail language={language} />}
+            />
+            <Route
+              path="/kontaktai"
+              element={<Kontaktai language={language} />}
+            />
           </Routes>
           <Footer />
         </BasketProvider>

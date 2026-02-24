@@ -2,7 +2,8 @@ import "./Product.css";
 import { useNavigate } from "react-router-dom";
 import { useBasket } from "../../content/basket/useBasket";
 
-const Product = ({ product, mėginukas }) => {
+const Product = ({ product, mėginukas, words }) => {
+  // words is passed down from Produktai.jsx and contains the language-specific text
   const navigate = useNavigate();
   const { basketItems, addToBasket } = useBasket();
   const mėginukasItem = mėginukas ? mėginukas(product) : null;
@@ -56,12 +57,22 @@ const Product = ({ product, mėginukas }) => {
           <p className="product-detail-description-secondary">
             {product.description2}
           </p>
-          <div className="mėginukas-container">
+          <div
+            className="mėginukas-container"
+            onClick={(e) => e.stopPropagation()}
+          >
             {mėginukasItem ? (
               <div className="mėginukas-item">
-                <span className="mėginukas-name">{mėginukasItem.name}</span>
+                <span className="mėginukas-name">
+                  {mėginukasItem.name}
+                  {" - "}
+                  {words && words.productCardText}
+                </span>
                 <div className="mėginukas-actions">
-                  <span className="mėginukas-price">{mėginukasItem.price}€</span>
+                  <span className="mėginukas-price">
+                    {mėginukasItem.price}€
+                  </span>
+                  <span className="bottle-size">{mėginukasItem.size}</span>
                   <div className="qty-controls mėginukas-qty-controls">
                     <button
                       type="button"
@@ -95,7 +106,7 @@ const Product = ({ product, mėginukas }) => {
             <span className="product-detail-price">{product.price}€</span>
             <div className="cart-controls">
               <span id="text" className="cart-label">
-                PRIDĖTI Į KREPŠELĮ:
+                {words && words.productCardText2}
               </span>
               <div className="qty-controls">
                 <button

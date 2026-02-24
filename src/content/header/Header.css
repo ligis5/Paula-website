@@ -34,6 +34,39 @@
   border-bottom: 2px solid #D4AF37;
 }
 
+.language-selector{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    border: 1px solid #D4AF37;
+    border-radius: 999px;
+    background: rgba(20, 17, 16, 0.75);
+}
+
+.language-btn{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    border: none;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    background: transparent;
+    color: #f5e6b5;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.language-btn:hover{
+    background: rgba(212, 175, 55, 0.2);
+}
+
+.language-btn.active{
+    background: #D4AF37;
+    color: #231f1e;
+}
+
 /* Hamburger button and responsive menu */
 .hamburger-btn{
     display: none;
@@ -85,6 +118,13 @@
     }
     .category-item{
         font-size: 1.5rem;
-        color: #111;
+        color: #f5e6b5;
+    }
+    .language-selector{
+        margin-top: 0.25rem;
+        background: rgba(15, 8, 8, 0.25);
+    }
+    .language-btn{
+        font-size: 0.85rem;
     }
 }

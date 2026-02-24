@@ -149,7 +149,7 @@ padding-top: 80px;
         overflow-x: auto; 
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
-        scroll-snap-type: both mandatory;
+        scroll-snap-type: x mandatory;
         scroll-snap-align: center;
     }
     .cards-container .product-detail-card{

@@ -197,6 +197,9 @@
     border-radius: 15px;
     margin: 0;
   }
+  .product-detail-info {
+    gap: 0.5rem;
+  }
 
   .product-detail-content {
     gap: 1.5rem;
@@ -231,7 +234,7 @@
   }
 
   .product-detail-footer {
-    gap: 0.75rem;
+    margin: 0;
   }
 
   .product-detail-back-btn {

@@ -57,6 +57,48 @@
   font-size: 1rem;
 }
 
+.mėginukas-container{
+  width: 100%;
+}
+
+.mėginukas-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: calc(100% - 2rem);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.mėginukas-name{
+  color: #d4af37;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+.mėginukas-actions{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.mėginukas-price{
+  color: #d4af37;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.mėginukas-qty-controls{
+  padding: 0.35rem 0.55rem;
+}
+
 
 @media (max-width: 750px) {
   .cards-container > .product-detail-card{
@@ -69,4 +111,41 @@
   .product-bottom{
   justify-content: space-around;
 }
+  .mėginukas-item{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    border-radius: 7px;
+    padding: 0.55rem 0.7rem;
+    width: calc(100% - 1rem);
+  }
+
+  .mėginukas-actions{
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.55rem;
+  }
+
+  .mėginukas-name,
+  .mėginukas-price{
+    font-size: 0.67rem;
+  }
+
+  .mėginukas-item .qty-controls{
+    gap: 0.35rem;
+    padding: 0.25rem 0.4rem;
+    border-radius: 5px;
+  }
+
+  .mėginukas-item .qty-btn{
+    padding: 0.35rem 0.5rem;
+    font-size: 0.64rem;
+    min-width: 1.45rem;
+    border-radius: 4px;
+  }
+
+  .mėginukas-item .qty-value{
+    min-width: 1.35rem;
+    font-size: 0.67rem;
+  }
 }

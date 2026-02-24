@@ -47,7 +47,7 @@ const Produktai = () => {
       };
     });
   }, []);
-
+  // Scroll the card row left or right by 70% of its width when the corresponding arrow is clicked, scroll snap type does the rest of the work to ensure it snaps to the nearest card.
   const scrollCards = useCallback((index, direction) => {
     const row = cardRowRefs.current[index];
 
@@ -78,6 +78,17 @@ const Produktai = () => {
       window.removeEventListener("resize", refreshAllHints);
     };
   }, [updateScrollHints]);
+
+  const addSamplesToPerfumes = (product) => {
+    let mėginukas = {};
+    mėginukas = {
+      id: `mėginukas-${product.id}`,
+      name: `${product.name} mėginukas`,
+      price: 4.5,
+      ammount: "3ml",
+    };
+    return mėginukas;
+  };
 
   return (
     <div
@@ -118,6 +129,7 @@ const Produktai = () => {
                   key={product.id}
                   product={product}
                   addToBasket={addToBasket}
+                  mėginukas={addSamplesToPerfumes}
                 />
               ))}
             </div>

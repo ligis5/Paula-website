@@ -7,6 +7,7 @@ import ShopingCartOpen from "../../content/images/shopping-cart-open.svg";
 const Basket = () => {
   const { basketItems, addToBasket } = useBasket();
   const [isBasketOpen, setIsBasketOpen] = useState(true);
+  // Calculate the grand total by summing up the total price of each item (unit price * quantity)
   const grandTotal = basketItems.reduce((sum, item) => {
     const unitPrice = Number(item.price) || 0;
     return sum + unitPrice * item.quantity;

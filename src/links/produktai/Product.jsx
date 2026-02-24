@@ -2,9 +2,10 @@ import "./Product.css";
 import { useNavigate } from "react-router-dom";
 import { useBasket } from "../../content/basket/useBasket";
 
-const Product = ({ product }) => {
+const Product = ({ product, mėginukas }) => {
   const navigate = useNavigate();
   const { basketItems, addToBasket } = useBasket();
+  const mėginukasItem = mėginukas ? mėginukas(product) : null;
 
   const handleClick = () => {
     navigate(`/produktai/${product.id}`);
@@ -12,11 +13,15 @@ const Product = ({ product }) => {
 
   const existing = basketItems.find((i) => i.name === product.name);
   const quantity = existing ? existing.quantity : 0;
+  const existingMėginukas = mėginukasItem
+    ? basketItems.find((i) => i.name === mėginukasItem.name)
+    : null;
+  const mėginukasQuantity = existingMėginukas ? existingMėginukas.quantity : 0;
 
-  const changeQuantity = (delta) => (event) => {
+  const changeQuantity = (item, currentQuantity, delta) => (event) => {
     event.stopPropagation();
-    const newQty = Math.max(0, quantity + delta);
-    addToBasket(product.name, newQty, product.price);
+    const newQty = Math.max(0, currentQuantity + delta);
+    addToBasket(item.name, newQty, item.price);
   };
 
   return (
@@ -51,6 +56,41 @@ const Product = ({ product }) => {
           <p className="product-detail-description-secondary">
             {product.description2}
           </p>
+          <div className="mėginukas-container">
+            {mėginukasItem ? (
+              <div className="mėginukas-item">
+                <span className="mėginukas-name">{mėginukasItem.name}</span>
+                <div className="mėginukas-actions">
+                  <span className="mėginukas-price">{mėginukasItem.price}€</span>
+                  <div className="qty-controls mėginukas-qty-controls">
+                    <button
+                      type="button"
+                      className="qty-btn"
+                      onClick={changeQuantity(
+                        mėginukasItem,
+                        mėginukasQuantity,
+                        -1,
+                      )}
+                    >
+                      -1
+                    </button>
+                    <span className="qty-value">{mėginukasQuantity}</span>
+                    <button
+                      type="button"
+                      className="qty-btn"
+                      onClick={changeQuantity(
+                        mėginukasItem,
+                        mėginukasQuantity,
+                        1,
+                      )}
+                    >
+                      +1
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : null}
+          </div>
           <div className="product-detail-footer">
             <span className="product-detail-price">{product.price}€</span>
             <div className="cart-controls">
@@ -61,7 +101,7 @@ const Product = ({ product }) => {
                 <button
                   type="button"
                   className="qty-btn"
-                  onClick={changeQuantity(-1)}
+                  onClick={changeQuantity(product, quantity, -1)}
                 >
                   -1
                 </button>
@@ -69,7 +109,7 @@ const Product = ({ product }) => {
                 <button
                   type="button"
                   className="qty-btn"
-                  onClick={changeQuantity(1)}
+                  onClick={changeQuantity(product, quantity, 1)}
                 >
                   +1
                 </button>

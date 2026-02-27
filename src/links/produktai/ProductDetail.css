@@ -88,6 +88,15 @@
   color: #b0b0b0;
   font-style: italic;
 }
+.product-detail-description-third{
+  font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+    color: #cccccc;
+    letter-spacing: 0.8px;
+    font-style: italic;
+  }
 
 .product-detail-about {
   background: rgba(212, 175, 55, 0.1);
@@ -194,6 +203,8 @@
   .product-detail-card {
     width: 90%;
     padding: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     border-radius: 15px;
     margin: 0;
   }
@@ -202,7 +213,7 @@
   }
 
   .product-detail-content {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .product-detail-title {
@@ -215,6 +226,13 @@
 
   .product-detail-description-secondary {
     font-size: 0.85rem;
+  }
+  .product-detail-description-third{
+    padding-top: 1rem;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: #cccccc;
+    letter-spacing: 0.6px;
   }
 
   .product-detail-about {

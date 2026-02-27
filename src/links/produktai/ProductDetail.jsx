@@ -14,6 +14,17 @@ const ProductDetail = ({ language }) => {
   const allProducts = produktaiData[language].flat();
   const product = allProducts.find((p) => p.id === productId);
 
+  const addSamplesToPerfumes = (product) => {
+    let mėginukas = {};
+    mėginukas = {
+      id: `mėginukas-${product.id}`,
+      name: `${product.name}`,
+      price: 4.5,
+      size: "3ml",
+    };
+    return mėginukas;
+  };
+
   if (!product) {
     return (
       <div
@@ -66,6 +77,8 @@ const ProductDetail = ({ language }) => {
           product={product}
           addToBasket={addToBasket}
           words={allProducts.slice(-1)}
+          description3={product.description3}
+          mėginukas={addSamplesToPerfumes(product)}
         />
         <button
           className="product-detail-back-btn"

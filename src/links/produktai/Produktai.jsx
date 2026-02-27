@@ -67,6 +67,7 @@ const Produktai = ({ language }) => {
     });
   }, []);
 
+  // On component mount, and whenever the window is resized, check if the scroll arrows should be shown for each card row based on the current scroll position and the total scrollable width.
   useEffect(() => {
     const refreshAllHints = () => {
       cardRowRefs.current.forEach((row, index) => {
@@ -75,7 +76,6 @@ const Produktai = ({ language }) => {
         }
       });
     };
-
     const frame = requestAnimationFrame(refreshAllHints);
     window.addEventListener("resize", refreshAllHints);
 
@@ -84,17 +84,6 @@ const Produktai = ({ language }) => {
       window.removeEventListener("resize", refreshAllHints);
     };
   }, [updateScrollHints]);
-
-  const addSamplesToPerfumes = (product) => {
-    let mėginukas = {};
-    mėginukas = {
-      id: `mėginukas-${product.id}`,
-      name: `${product.name}`,
-      price: 4.5,
-      size: "3ml",
-    };
-    return mėginukas;
-  };
 
   return (
     <div
@@ -134,7 +123,6 @@ const Produktai = ({ language }) => {
                   key={product.id}
                   product={product}
                   addToBasket={addToBasket}
-                  mėginukas={addSamplesToPerfumes}
                   words={products[2]}
                 />
               ))}

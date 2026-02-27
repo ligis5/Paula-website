@@ -72,6 +72,8 @@ const produktaiData = {
         description: "Oriental floral, Unisex - 50ml",
         description2:
           "Prabangus rytietiškas, šiltas ir jausmingas aromatas kurio pagrindą sudaro mediena ir lengvas saldumas",
+        description3:
+          "Tai šiltas, rytietiškas  nišinis aromatas. Jame susilieja subtili prabanga, ramybė ir lengvas saldumas, kuriantis jaukumo bei pasitikėjimo savimi jausmą. Kvapas atsiskleidžia švelniai, tačiau turi charakterį — jis gilus, elegantiškas ir šiek tiek paslaptingas. Medžio šiluma ir vos juntamas saldumas palieka ilgai išliekantį, magnetišką šleifą, kuris tyliai traukia. Tai aromatas vakarams, artumui ir momentams, kai norisi jaustis ypatingai be pastangų.",
         price: 48.5,
         image: require("../../content/images/ruby-drift.jpg"),
         about:
@@ -83,6 +85,8 @@ const produktaiData = {
         description: "Citrus Gourmand, Unisex – 50 ml",
         description2:
           "Stiprus ir charizmatiškas aromatas, kuriame dominuoja medaus ir kašmyro natos. Jaučiamas kontrastas tarp gaivios citrinos ir saldaus medaus, o tonka pupelės išlieka ilgai, suteikdamos kremiškumo ir gilumo",
+        description3:
+          "Tai stiprus ir charizmatiškas aromatas, kuris iš karto patraukia dėmesį. Jame susilieja lengvas gaivumas ir šiltas medaus saldumas. Medaus šiluma ir kašmyro minkštumas suteikia prabangos jausmą. Kvapas tampa sodrus, jausmingas ir ilgai išliekantis — paliekantis ryškų šleifą tiek ant odos, tiek ant drabužių. Tai kvapas žmogui, kuris nebijo būti pastebėtas. Daugelis jį išbandžiusių iškart atkreipia dėmesį į jo intensyvumą ir išskirtinumą — tai aromatas, kuris sulaukia komplimentų.",
         price: 48.5,
         image: require("../../content/images/honey-drops.jpg"),
         about:
